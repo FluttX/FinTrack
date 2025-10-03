@@ -18,6 +18,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -35,24 +36,24 @@ fun CardSection(
             .height(230.dp)
             .fillMaxWidth()
             .clip(RoundedCornerShape(16.dp))
-            .clickable{onClick()}
+            .clickable { onClick() }
     ) {
         Image(
             painter = painterResource(R.drawable.card),
-            contentDescription = "Card Image",
+            contentDescription = stringResource(R.string.card_background),
             modifier = Modifier.matchParentSize(),
             contentScale = ContentScale.Crop,
         )
         Image(
             painter = painterResource(R.drawable.sim),
-            contentDescription = "Card Image",
+            contentDescription = stringResource(R.string.card_corner_icon),
             modifier = Modifier
                 .align(Alignment.TopEnd)
                 .padding(16.dp),
         )
         Image(
             painter = painterResource(R.drawable.visa),
-            contentDescription = "Card Image",
+            contentDescription = stringResource(R.string.card_name),
             modifier = Modifier
                 .align(Alignment.TopStart)
                 .padding(16.dp),
@@ -86,7 +87,7 @@ fun CardSection(
         ) {
             Column {
                 Text(
-                    text = "Your Balance",
+                    text = stringResource(R.string.your_balance),
                     color = Color.White,
                     fontSize = 18.sp,
                 )

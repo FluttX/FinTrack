@@ -2,4 +2,12 @@
     <string name="app_name">FinTrack</string>
     <string name="intro_message">The Best App to\nmanage your\nmoney</string>
     <string name="get_started">Get Started</string>
+    <string name="deposit">Deposit</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="add_card">Add Card</string>
+    <string name="view_all">View All</string>
+    <string name="your_balance">Your Balance</string>
+    <string name="card_background">Card Background</string>
+    <string name="card_corner_icon">Card Corner Icon</string>
+    <string name="card_name">Card Name</string>
 </resources>
