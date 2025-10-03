@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.fluttx.fintrack.activities.dashboard.components.ActionButtonRow
 import com.fluttx.fintrack.activities.dashboard.components.CardSection
+import com.fluttx.fintrack.activities.dashboard.components.ExpenseItem
 import com.fluttx.fintrack.activities.dashboard.components.HeaderSection
 import com.fluttx.fintrack.domain.ExpenseDomain
 
@@ -20,11 +21,10 @@ import com.fluttx.fintrack.domain.ExpenseDomain
 @Preview(showBackground = true)
 fun MainScreenPreview() {
     val expenses = listOf(
-        ExpenseDomain("Flight", 220.0, "img1", "17th June 2025, 08:00 AM"),
-        ExpenseDomain("Flight", 220.0, "img2", "18th June 2025, 09:30 AM"),
-        ExpenseDomain("Flight", 220.0, "img3", "20th June 2025, 01:34 PM"),
-        ExpenseDomain("Flight", 220.0, "img1", "25th June 2025, 05:43 PM"),
-        ExpenseDomain("Flight", 220.0, "img2", "30th June 2025, 10:00 PM"),
+        ExpenseDomain("Coffee", 220.0, "restaurant", "17th June 2025, 08:00 AM"),
+        ExpenseDomain("Movie", 220.0, "cinema", "18th June 2025, 09:30 AM"),
+        ExpenseDomain("Burger", 220.0, "mcdonald", "25th June 2025, 05:43 PM"),
+        ExpenseDomain("Cold Coffee", 220.0, "restaurant", "20th June 2025, 01:34 PM"),
     )
     MainScreen(expenses = expenses, onCardClick = {})
 }
@@ -48,6 +48,10 @@ fun MainScreen(
             item { HeaderSection() }
             item { CardSection(onClick = onCardClick) }
             item { ActionButtonRow() }
+
+            items(count = expenses.size) {
+                index -> ExpenseItem(item = expenses[index])
+            }
         }
     }
 }
