@@ -10,4 +10,10 @@
     <string name="card_background">Card Background</string>
     <string name="card_corner_icon">Card Corner Icon</string>
     <string name="card_name">Card Name</string>
+    <string name="wallet">Wallet</string>
+    <string name="market">Market</string>
+    <string name="trade">Trade</string>
+    <string name="futures">Futures</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
 </resources>
