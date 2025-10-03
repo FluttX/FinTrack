@@ -1,15 +1,12 @@
-package com.fluttx.fintrack.Activities.introActivity
+package com.fluttx.fintrack.activities.intro
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.fluttx.fintrack.Activities.introActivity.screens.IntroScreen
-import com.fluttx.fintrack.MainActivity
-import com.fluttx.fintrack.R
+import com.fluttx.fintrack.activities.intro.screens.IntroScreen
+import com.fluttx.fintrack.activities.dashboard.MainActivity
 
 class IntroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.fluttx.fintrack.Activities.introActivity.screens
+package com.fluttx.fintrack.activities.intro.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
