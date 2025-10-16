@@ -1,5 +1,6 @@
 package com.fluttx.fintrack.activities.dashboard.components
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -26,28 +27,29 @@ import androidx.compose.ui.unit.sp
 import com.fluttx.fintrack.R
 import com.fluttx.fintrack.domain.ExpenseDomain
 
+@SuppressLint("LocalContextResourcesRead", "DiscouragedApi")
 @Composable
 fun ExpenseItem(
     item: ExpenseDomain
 ) {
-    Row (
-       modifier = Modifier
-           .padding(vertical = 4.dp)
-           .fillMaxWidth()
-           .height(70.dp)
-           .padding(horizontal = 16.dp)
-           .clip(RoundedCornerShape(12.dp))
-           .background(Color.White)
-           .border(
-               width = 1.dp,
-               color = Color.LightGray,
-               shape = RoundedCornerShape(12.dp),
-           ),
+    Row(
+        modifier = Modifier
+            .padding(vertical = 4.dp)
+            .fillMaxWidth()
+            .height(70.dp)
+            .padding(horizontal = 16.dp)
+            .clip(RoundedCornerShape(12.dp))
+            .background(Color.White)
+            .border(
+                width = 1.dp,
+                color = Color.LightGray,
+                shape = RoundedCornerShape(12.dp),
+            ),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         val context = LocalContext.current
         val resId = context.resources.getIdentifier(
-            item.picture,"drawable",context.packageName
+            item.picture, "drawable", context.packageName
         )
 
         Image(
@@ -89,6 +91,6 @@ fun ExpenseItem(
 @Composable
 @Preview
 fun ExpenseItemPreview() {
-    val expense = ExpenseDomain("Coffee",120.0,"restaurant", "10 Nov 2025, 10:00 AM")
+    val expense = ExpenseDomain("Coffee", 120.0, "restaurant", "10 Nov 2025, 10:00 AM")
     ExpenseItem(expense)
 }
